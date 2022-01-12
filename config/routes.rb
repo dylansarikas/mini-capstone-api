@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get "/store_front", controller: "products", action: "display_all"
   get "/first_product", controller: "products", action: "display_first"
   get "last_product", controller: "products", action: "display_last"
-  get "/third_product", controller: "products", action: "third_product"
+  get "/choose_product_seg/:id_number", controller: "products", action: "choose_product"
+  get "/choose_product_query", controller: "products", action: "choose_product"
 end
