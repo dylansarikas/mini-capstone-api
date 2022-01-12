@@ -4,4 +4,12 @@ class ProductsController < ApplicationController
     render json: Product.all
   end
 
+  def display_first
+    render json: Product.first
+  end
+
+  def display_last 
+    render json: Product.last
+  end
+
 end

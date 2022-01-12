@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/storefront", controller: "products", action: "display_all"
+  get "/store_front", controller: "products", action: "display_all"
+  get "/first_product", controller: "products", action: "display_first"
+  get "last_product", controller: "products", action: "display_last"
 end
