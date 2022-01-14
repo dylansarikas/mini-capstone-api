@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+###I love you old code
+
   def display_all
     products = Product.all
     render json: products.as_json
@@ -28,6 +30,18 @@ class ProductsController < ApplicationController
     product = Product.all
     render json: product.as_json
   end
+
+  def create
+    product1 = Product.new(
+      name: params[:name],
+      price: params[:price],
+      description: params[:description],
+      image_url: params[:image_url]
+    )
+    product1.save
+    render json:product1.as_json
+  end
+
 
   def show
     number = params[:id].to_i

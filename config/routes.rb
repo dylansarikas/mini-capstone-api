@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/choose_product_seg/:id_number", controller: "products", action: "choose_product"
   get "/choose_product_query", controller: "products", action: "choose_product"
   get "/products" => "products#index"
+  post "/products" => "products#create"
   get "/products/:id" => "products#show"
 end

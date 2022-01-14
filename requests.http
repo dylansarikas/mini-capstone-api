@@ -5,3 +5,14 @@ GET http://localhost:3000/products
 ###Products Show
 
 GET http://localhost:3000/products/2
+
+###Products Create
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Packers Sweatshirt",
+  "price": 60,
+  "description": "A green and yellow sweatshirt"
+}
