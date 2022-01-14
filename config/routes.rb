@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get "last_product", controller: "products", action: "display_last"
   get "/choose_product_seg/:id_number", controller: "products", action: "choose_product"
   get "/choose_product_query", controller: "products", action: "choose_product"
+  get "/products" => "products#index"
+  get "/products/:id" => "products#show"
 end

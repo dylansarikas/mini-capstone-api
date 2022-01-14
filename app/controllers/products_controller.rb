@@ -24,4 +24,15 @@ class ProductsController < ApplicationController
     #render json: Product.last
   end
 
+  def index
+    product = Product.all
+    render json: product.as_json
+  end
+
+  def show
+    number = params[:id].to_i
+    product = Product.find_by(id: number)
+    render json: product.as_json
+  end
+
 end
