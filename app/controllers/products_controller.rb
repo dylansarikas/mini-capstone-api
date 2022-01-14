@@ -60,4 +60,10 @@ class ProductsController < ApplicationController
     render json: product1.as_json
   end
 
+  def destroy
+    product1 = Product.find(params[:id])
+    product1.destroy
+    render json:{message: "The product #{product1.name} was successfully obliterated! (destroyed)"}
+  end
+
 end
