@@ -16,3 +16,14 @@ Content-Type: application/json
   "price": 60,
   "description": "A green and yellow sweatshirt"
 }
+
+###Products Update
+
+PATCH http://localhost:3000/products/2
+Content-Type: application/json
+
+{
+  "description": "A ball used for American Grid iron",
+  "price": 175,
+  "name": "American Footbal"
+}
