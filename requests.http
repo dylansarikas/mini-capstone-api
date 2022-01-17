@@ -4,7 +4,7 @@ GET http://localhost:3000/products
 
 ###Products Show
 
-GET http://localhost:3000/products/6
+GET http://localhost:3000/products/8
 
 ###Products Create
 
@@ -24,7 +24,7 @@ Content-Type: application/json
 
 {
   "description": "A ball used for American Grid iron",
-  "price": 175,
+  "price": 8,
   "name": "American Footbal"
 }
 
