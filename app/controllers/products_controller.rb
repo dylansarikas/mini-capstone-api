@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def index
     product = Product.all
-    render json: product.as_json
+    render json: product
   end
 
   def create
@@ -39,14 +39,14 @@ class ProductsController < ApplicationController
       image_url: params[:image_url]
     )
     product1.save
-    render json:product1.as_json
+    render json:product1
   end
 
 
   def show
     number = params[:id].to_i
     product = Product.find_by(id: number)
-    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
+    render json: product
   end
 
   def update
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
     product1.image_url = params[:image_url] || product1.image_url
     product1.price = params[:price] || product1.price
     product1.save
-    render json: product1.as_json
+    render json: product1
   end
 
   def destroy
