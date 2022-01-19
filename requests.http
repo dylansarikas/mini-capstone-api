@@ -19,6 +19,8 @@ Content-Type: application/json
 
 ###Products Update
 
+Product.new(name: "h", price: -1, description: "sdf", inventory: 3, image_url: "sdfs")
+
 PATCH http://localhost:3000/products/2
 Content-Type: application/json
 
