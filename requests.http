@@ -12,22 +12,18 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "name": "Packers Sweatshirt",
-  "price": 60,
-  "description": "A green and yellow sweatshirt"
+  "name": "This should fail",
+  "price": -60,
+  "description": "shrt"
 }
 
 ###Products Update
 
-Product.new(name: "h", price: -1, description: "sdf", inventory: 3, image_url: "sdfs")
-
-PATCH http://localhost:3000/products/2
+PATCH http://localhost:3000/products/8
 Content-Type: application/json
 
 {
-  "description": "A ball used for American Grid iron",
-  "price": 8,
-  "name": "American Footbal"
+  "inventory": 6
 }
 
 ###Products Destroy
