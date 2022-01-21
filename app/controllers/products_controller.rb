@@ -32,7 +32,6 @@ class ProductsController < ApplicationController
   # end
 
   def index
-    #changes these to individual if statements, except sort thats get one else statemetn
     product1 = Product.all
     if params[:search]
       product1 = product1.where("name iLIKE ?", "#{params[:search]}")
