@@ -1,6 +1,6 @@
 ###Products Index
 
-GET http://localhost:3000/products?sort=price&discount=true
+GET http://localhost:3000/products?discount=true
 
 ###Products Show
 

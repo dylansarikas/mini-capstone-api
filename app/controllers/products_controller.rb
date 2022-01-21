@@ -36,16 +36,18 @@ class ProductsController < ApplicationController
     product1 = Product.all
     if params[:search]
       product1 = product1.where("name iLIKE ?", "#{params[:search]}")
-    elsif params[:sort]
+    end
+    if params[:discount]
+      product1 = product1.where("price < ?", 100)
+    end
+    if params[:sort]
       if params[:sort_order]
         product1 = product1.order(price: "#{params[:sort_order]}")
       else
         product1 = product1.order(:price)
       end
-    elsif params[:discount] ==  true
-      product1 = product1.where("price < ?", 100)
-    elsif !(params[:sort])
-      product1 = product1.order(id: :desc)
+    else
+      product1 = product1.order(id: :asc)
     end
     render json: product1
   end
