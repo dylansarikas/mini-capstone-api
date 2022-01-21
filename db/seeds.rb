@@ -12,6 +12,12 @@
 # Product.create(name: "Jersey", price: 100, image_url: "https://cdn.shoplightspeed.com/shops/603842/files/36501843/650x750x2/image.jpg", description: "A Green Throwback Brett Favre #4 Jersey")
 # Product.create(name: "Helmet", price: 250, image_url: "https://cdn.shopify.com/s/files/1/2458/4861/products/GreenBayPackersSpeedAuthenticUpgradedDamaged01_1024x.jpg?v=1612813298", description: "Bring Protection")
 
-Supplier.create(name: "Cheesehead Incorporated", email: "cheesehead@gmail.com", phone_number: "867-5309")
-Supplier.create(name: "Lambeau Leap", email: "leaping@gmail.com", phone_number: "666-3333")
-Supplier.create(name: "Fox River Runs", email: "frruns@gmail.com", phone_number: "111-9999")
+# Supplier.create(name: "Cheesehead Incorporated", email: "cheesehead@gmail.com", phone_number: "867-5309")
+# Supplier.create(name: "Lambeau Leap", email: "leaping@gmail.com", phone_number: "666-3333")
+# Supplier.create(name: "Fox River Runs", email: "frruns@gmail.com", phone_number: "111-9999")
+
+Image.create(url: "https://archive.jsonline.com/Services/image.ashx?domain=www.jsonline.com&file=26516117-m26502396.jpg&resize=", product_id: 8)
+Image.create(url: "https://assets.aboutamazon.com/dims4/default/1f1d67a/2147483647/strip/true/crop/3888x2188+0+148/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F31%2F96%2F0ab6f148452e9cf744d9e6a9cf28%2Fistock-92024772-1.jpg", product_id: 8)
+Image.create(url: "https://classic.cdn.media.amplience.net/i/hibbett/X1827_0001_right", product_id: 8)
+Image.create(url: "https://cdn.shoplightspeed.com/shops/603842/files/36501843/650x750x2/image.jpg", product_id: 2)
+Image.create(url: "https://cdn.shopify.com/s/files/1/2458/4861/products/GreenBayPackersSpeedAuthenticUpgradedDamaged01_1024x.jpg?v=1612813298", product_id: 3)
