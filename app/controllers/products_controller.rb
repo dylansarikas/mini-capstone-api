@@ -26,9 +26,28 @@ class ProductsController < ApplicationController
     #render json: Product.last
   end
 
+  # def index
+  #   product = Product.all
+  #   render json: product
+  # end
+
   def index
-    product = Product.all
-    render json: product
+    #changes these to individual if statements, except sort thats get one else statemetn
+    product1 = Product.all
+    if params[:search]
+      product1 = product1.where("name iLIKE ?", "#{params[:search]}")
+    elsif params[:sort]
+      if params[:sort_order]
+        product1 = product1.order(price: "#{params[:sort_order]}")
+      else
+        product1 = product1.order(:price)
+      end
+    elsif params[:discount] ==  true
+      product1 = product1.where("price < ?", 100)
+    elsif !(params[:sort])
+      product1 = product1.order(id: :desc)
+    end
+    render json: product1
   end
 
   def create
