@@ -5,16 +5,20 @@ GET http://localhost:3000/products
 ###Products Show
 
 GET http://localhost:3000/products/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDE5NDN9.MU4LV2X51C2-Kk9wD1yizmdSnaMrusb57eod0efRLdM
 
 ###Products Create
 
 POST http://localhost:3000/products
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDE5NDN9.MU4LV2X51C2-Kk9wD1yizmdSnaMrusb57eod0efRLdM
 
 {
-  "name": "This should fail",
-  "price": -60,
-  "description": "shrt"
+  "name": "Packers Special Teams",
+  "price": 160,
+  "description": "It really was special :(",
+  "inventory": 13,
+  "supplier_id": 1
 }
 
 ###Products Update
@@ -50,3 +54,4 @@ Content-Type: application/json
   "email": "bester.tester@gmail.com",
   "password": "password"
 }
+
