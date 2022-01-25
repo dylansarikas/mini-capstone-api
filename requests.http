@@ -55,3 +55,22 @@ Content-Type: application/json
   "password": "password"
 }
 
+### Order Index
+
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyMjcxNzd9.jzA9-IpLmGHG2dLZEEzjeQicr2CR9YK6Q8RbcMO8Jio
+
+### Order Create
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyMjcxNzd9.jzA9-IpLmGHG2dLZEEzjeQicr2CR9YK6Q8RbcMO8Jio
+
+{
+  "product_id": 3,
+  "quantity": 6
+}
+
+### Order Show
+
+GET http://localhost:3000/orders/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMyMjcwNDl9.yP8EKXbz-ziRuQsS2pEN3ry4PP7GVSsTwWZolJDw9tE
