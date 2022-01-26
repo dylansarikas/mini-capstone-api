@@ -7,23 +7,24 @@
 ###Products Index
 
 GET http://localhost:3000/products
+Authorization: Bearer {{jwt2}}
 
 ###Products Show
 
 GET http://localhost:3000/products/8
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDE5NDN9.MU4LV2X51C2-Kk9wD1yizmdSnaMrusb57eod0efRLdM
+Authorization: Bearer {{jwt1}}
 
 ###Products Create
 
 POST http://localhost:3000/products
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDE5NDN9.MU4LV2X51C2-Kk9wD1yizmdSnaMrusb57eod0efRLdM
+Authorization: Bearer {{jwt1}}
 
 {
-  "name": "Packers Special Teams",
-  "price": 160,
-  "description": "It really was special :(",
-  "inventory": 13,
+  "name": "Packers Papyrus Font",
+  "price": 12,
+  "description": "Truly a great font",
+  "inventory": 160,
   "supplier_id": 1
 }
 
@@ -76,8 +77,8 @@ Content-Type: application/json
 Authorization: Bearer {{jwt2}}
 
 {
-  "product_id": 1,
-  "quantity": 6
+  "product_id": 2,
+  "quantity": 7
 }
 
 ### Order Show

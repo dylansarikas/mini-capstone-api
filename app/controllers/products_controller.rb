@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy] 
 
 ###I love you old code
 
