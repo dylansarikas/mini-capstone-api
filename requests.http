@@ -1,3 +1,9 @@
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMzMDU1ODR9.K0Ycc5cmS92GJm-VA5m0ZgXgfhrMIpDrYEq_tHTIgxE
+
+@jwt2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMzMDU2MTB9.pxciGEUw3B37YmNuYO6R3uoeQbogeJlM0Eec1qEAi0U
+
+@jwt3 = hbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMzMDU2MTB9.pxciGEUw3B37YmNuYO6R3uoeQbogeJlM0Eec1q
+
 ###Products Index
 
 GET http://localhost:3000/products
@@ -34,13 +40,17 @@ Content-Type: application/json
 
 DELETE http://localhost:3000/products/6
 
+###Users Index
+
+GET http://localhost:3000/users
+
 ###Users Create
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Bester Tester",
-  "email": "bester.tester@gmail.com",
+  "name": "Mester Bester",
+  "email": "mester.bester@gmail.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -58,15 +68,15 @@ Content-Type: application/json
 ### Order Index
 
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyMjcxNzd9.jzA9-IpLmGHG2dLZEEzjeQicr2CR9YK6Q8RbcMO8Jio
+Authorization: Bearer {{jwt2}}
 
 ### Order Create
 POST http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMyMjcxNzd9.jzA9-IpLmGHG2dLZEEzjeQicr2CR9YK6Q8RbcMO8Jio
+Authorization: Bearer {{jwt2}}
 
 {
-  "product_id": 3,
+  "product_id": 1,
   "quantity": 6
 }
 
