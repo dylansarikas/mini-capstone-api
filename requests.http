@@ -69,7 +69,7 @@ Content-Type: application/json
 ### Order Index
 
 GET http://localhost:3000/orders
-Authorization: Bearer {{jwt2}}
+Authorization: Bearer {{jwt3}}
 
 ### Order Create
 POST http://localhost:3000/orders
@@ -84,4 +84,4 @@ Authorization: Bearer {{jwt2}}
 ### Order Show
 
 GET http://localhost:3000/orders/8
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMyMjcwNDl9.yP8EKXbz-ziRuQsS2pEN3ry4PP7GVSsTwWZolJDw9tE
+Authorization: Bearer {{jwt1}}
